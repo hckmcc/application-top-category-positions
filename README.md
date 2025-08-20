@@ -27,24 +27,28 @@
 git clone git@github.com:hckmcc/application-top-category-positions.git
 ```
 3.  Скопируйте содержимое `.env.example` в `.env`
-4. Запустите сервер:
+4. Установите зависимости:
+```bash
+composer install
+ ```
+5. Запустите сервер:
 ```bash
 docker compose build
 docker compose up -d
 ```
-5. Перейдите в контейнер php-fpm:
+6. Перейдите в контейнер php-fpm:
 
 ```bash
 docker compose exec php-fpm bash
  ```
 
-6. Из контейнера php-fpm запустите миграции:
+7. Из контейнера php-fpm запустите миграции:
 
 ```bash
 php artisan migrate
 ```
 
-7. Из контейнера php-fpm запустите команду для заполнения prepared данных:
+8. Из контейнера php-fpm запустите команду для заполнения prepared данных:
 
 Загрузка данных за последние 30 дней:
 ```bash
@@ -55,7 +59,7 @@ php artisan apptica:fetch-positions
 php artisan apptica:fetch-positions 2025-08-05
 ```
 
-8. После запуска сервера можно работать с API через такие сервисы как Postman.
+9. После запуска сервера можно работать с API через такие сервисы как Postman.
 
 ## Эндпоинты
 ### 1. Получение информации с позициями приложения в топе по категориям для запрашиваемой даты

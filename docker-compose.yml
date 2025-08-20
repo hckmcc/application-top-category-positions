@@ -17,6 +17,7 @@ services:
 
     postgres:
         image: postgres:17.6
+        restart: unless-stopped
         volumes:
             - ./docker/postgres/data:/var/lib/postgresql/data
         ports:

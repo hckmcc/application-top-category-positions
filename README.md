@@ -62,7 +62,8 @@ php artisan apptica:fetch-positions 2025-08-05
 - **GET**  `http://localhost:8082/api/appTopCategory?date=2025-08-05`
 - Параметры:
     - date (обязательно) - запрашиваемая дата
-      **Ответ:**
+
+  **Ответ:**
 - **Статус:** `200 OK`
 ```json
    {
